@@ -1,0 +1,25 @@
+{
+  "name": "uri-template-router",
+  "version": "0.0.0",
+  "description": "RFC 6570 compliant router",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/* --reporter spec"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:elmerbulthuis/uri-template-router.git"
+  },
+  "keywords": [
+    "router",
+    "uri",
+    "template",
+    "rfc",
+    "6570"
+  ],
+  "author": "elmerbulthuis <elmerbulthuis@gmail.com>",
+  "license": "BSD",
+  "devDependencies": {
+    "mocha": "~1"
+  }
+}
