@@ -1,14 +1,14 @@
 {
-  "name": "uri-template-router",
+  "name": "uri-template",
   "version": "0.0.0",
-  "description": "RFC 6570 compliant router",
+  "description": "RFC 6570 compliant uri template parser, builder and router",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/* --reporter spec"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:elmerbulthuis/uri-template-router.git"
+    "url": "git@github.com:elmerbulthuis/uri-template.git"
   },
   "keywords": [
     "router",
