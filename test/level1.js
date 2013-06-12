@@ -11,6 +11,8 @@ describe('Level 1', function(){
 		h.addTest('{var}', 'value', data);
 		h.addTest('{hello}', 'Hello%20World%21', data);
 
+		h.addTest('{var}-{hello}', 'value-Hello%20World%21', data);
+
 	});
 
 });
