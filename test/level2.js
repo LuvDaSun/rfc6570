@@ -1,6 +1,6 @@
 var h = require('./h');
 
-xdescribe('Level 2', function(){
+describe('Level 2', function(){
 	var data = {
 		"var": "value"
 		, "hello": "Hello World!"

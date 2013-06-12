@@ -9,7 +9,7 @@ module.exports.addTest = function (template, str, data) {
 
 	});
 
-	it("parse '" + str + "' from '" + template + "'", function(){
+	xit("parse '" + str + "' from '" + template + "'", function(){
 		deepContain(uriTemplate.parse(str), data);
 	});
 
