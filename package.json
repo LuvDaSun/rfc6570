@@ -20,6 +20,7 @@
   "author": "elmerbulthuis <elmerbulthuis@gmail.com>",
   "license": "BSD",
   "devDependencies": {
-    "mocha": "~1"
+    "mocha": "~1",
+    "bower": "~0.9"
   }
 }
