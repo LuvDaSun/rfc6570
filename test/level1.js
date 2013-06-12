@@ -1,31 +1,19 @@
-var assert = require('assert');
-var UriTemplate = require('../lib/UriTemplate');
+var h = require('./h');
 
 describe('Level 1', function(){
+	var data = {
+		"var": "value"
+		, "hello": "Hello World!"
+	};
 	
 	describe('Simple string expansion', function(){
-		var uriTemplate = new UriTemplate('/{one}/{two}/');
 
-		it('stringify', function(){
-			assert.deepEqual(uriTemplate.stringify({
-				one: 'aap'
-				, two: 'noot'
-			}), '/aap/noot/')
-
-		});
-
-		it('parse', function(){
-
-			assert.deepEqual(uriTemplate.parse('/aap/noot/'), {
-				one: 'aap'
-				, two: 'noot'
-			});
-
-		});
-
+		h.addTest('{var}', 'value', data);
+		h.addTest('{hello}', 'Hello%20World%21', data);
 
 	});
 
-
 });
+
+
 

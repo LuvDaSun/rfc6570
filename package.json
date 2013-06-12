@@ -21,6 +21,7 @@
   "license": "BSD",
   "devDependencies": {
     "mocha": "~1",
-    "bower": "~0.9"
+    "bower": "~0.9",
+    "chai": "~1.6"
   }
 }
