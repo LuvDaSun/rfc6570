@@ -150,7 +150,7 @@ describe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{?keys*}', '?semi=%3B&dot=.&comma=%2C', data);
 	});
 
-	xdescribe('3.2.9. Form-Style Query Continuation: {&var}', function(){
+	describe('3.2.9. Form-Style Query Continuation: {&var}', function(){
 		h.addTest('{&who}', '&who=fred', data);
 		h.addTest('{&half}', '&half=50%25', data);
 		h.addTest('?fixed=yes{&x}', '?fixed=yes&x=1024', data);
