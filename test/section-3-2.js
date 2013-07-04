@@ -87,7 +87,7 @@ describe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{#keys*}', '#semi=;,dot=.,comma=,', data);
 	});
 
-	xdescribe('3.2.5. Label Expansion with Dot-Prefix: {.var}', function(){
+	describe('3.2.5. Label Expansion with Dot-Prefix: {.var}', function(){
 		h.addTest('{.who}', '.fred', data);
 		h.addTest('{.who,who}', '.fred.fred', data);
 		h.addTest('{.half,who}', '.50%25.fred', data);
