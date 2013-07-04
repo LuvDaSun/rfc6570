@@ -9,17 +9,17 @@ describe('Level 2', function(){
 	
 	describe('Reserved string expansion', function(){
 		
-		h.addTest('{+var}', 'value', data);
-		h.addTest('{+hello}', 'Hello%20World!', data);
-		h.addTest('{+path}/here', '/foo/bar/here', data);
-		h.addTest('here?ref={+path}', 'here?ref=/foo/bar', data);
+		h.addTest('{+var}', 'value', data, true);
+		h.addTest('{+hello}', 'Hello%20World!', data, true);
+		h.addTest('{+path}/here', '/foo/bar/here', data, true);
+		h.addTest('here?ref={+path}', 'here?ref=/foo/bar', data, true);
 
 	});
 
 	describe('Fragment expansion, crosshatch-prefixed', function(){
 		
-		h.addTest('X{#var}', 'X#value', data);
-		h.addTest('X{#hello}', 'X#Hello%20World!', data);
+		h.addTest('X{#var}', 'X#value', data, true);
+		h.addTest('X{#hello}', 'X#Hello%20World!', data, true);
 
 	});
 
