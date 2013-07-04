@@ -48,7 +48,7 @@ describe('Level 3', function(){
 	describe('Path-style parameters, semicolon-prefixed', function(){
 
 		h.addTest('{;x,y}', ';x=1024;y=768', data);
-		h.addTest('{;x,y,empty}', ';x=1024;y=768;empty', data, true);
+		h.addTest('{;x,y,empty}', ';x=1024;y=768;empty', data);
 	
 	});
 

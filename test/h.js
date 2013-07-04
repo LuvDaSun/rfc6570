@@ -1,10 +1,10 @@
 var assert = require('assert');
 var UriTemplate = require('../lib/UriTemplate');
 
-module.exports.addTest = function (template, str, data, skip) {
+module.exports.addTest = function (template, str, data) {
 	var uriTemplate = new UriTemplate(template);
 
-	( skip ? xit : it )("stringify '" + template + "' to '" + str + "'", function(){
+	it("stringify '" + template + "' to '" + str + "'", function(){
 		assert.equal(uriTemplate.stringify(data), str);
 
 	});
