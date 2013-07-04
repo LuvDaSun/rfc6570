@@ -1,6 +1,6 @@
 var h = require('./h');
 
-xdescribe('Examples from 3.2. Expression Expansion', function(){
+describe('Examples from 3.2. Expression Expansion', function(){
 	var data = {
 			"count": ["one", "two", "three"]
 			, "dom": ["example", "com"]
@@ -33,7 +33,7 @@ xdescribe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{&count*}', '&count=one&count=two&count=three', data);
 	});
 
-	describe('3.2.2. Simple String Expansion: {var}', function(){
+	xdescribe('3.2.2. Simple String Expansion: {var}', function(){
 		h.addTest('{var}', 'value', data);
 		h.addTest('{hello}', 'Hello%20World%21', data);
 		h.addTest('{half}', '50%25', data);
@@ -52,7 +52,7 @@ xdescribe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{keys*}', 'semi=%3B,dot=.,comma=%2C', data);
 	});
 
-	describe('3.2.3. Reserved Expansion: {+var}', function(){
+	xdescribe('3.2.3. Reserved Expansion: {+var}', function(){
 		h.addTest('{+var}', 'value', data);
 		h.addTest('{+hello}', 'Hello%20World!', data);
 		h.addTest('{+half}', '50%25', data);
@@ -72,7 +72,7 @@ xdescribe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{+keys*}', 'semi=;,dot=.,comma=,', data);
 	});
 
-	describe('3.2.4. Fragment Expansion: {#var}', function(){
+	xdescribe('3.2.4. Fragment Expansion: {#var}', function(){
 		h.addTest('{#var}', '#value', data);
 		h.addTest('{#hello}', '#Hello%20World!', data);
 		h.addTest('{#half}', '#50%25', data);
@@ -87,7 +87,7 @@ xdescribe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{#keys*}', '#semi=;,dot=.,comma=,', data);
 	});
 
-	describe('3.2.5. Label Expansion with Dot-Prefix: {.var}', function(){
+	xdescribe('3.2.5. Label Expansion with Dot-Prefix: {.var}', function(){
 		h.addTest('{.who}', '.fred', data);
 		h.addTest('{.who,who}', '.fred.fred', data);
 		h.addTest('{.half,who}', '.50%25.fred', data);
@@ -104,7 +104,7 @@ xdescribe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('X{.empty_keys*}', 'X', data);
 	});
 
-	describe('3.2.6. Path Segment Expansion: {/var}', function(){
+	xdescribe('3.2.6. Path Segment Expansion: {/var}', function(){
 		h.addTest('{/who}', '/fred', data);
 		h.addTest('{/who,who}', '/fred/fred', data);
 		h.addTest('{/half,who}', '/50%25/fred', data);
@@ -121,7 +121,7 @@ xdescribe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{/keys*}', '/semi=%3B/dot=./comma=%2C', data);
 	});
 
-	describe('3.2.7. Path-Style Parameter Expansion: {;var}', function(){
+	xdescribe('3.2.7. Path-Style Parameter Expansion: {;var}', function(){
 		h.addTest('{;who}', ';who=fred', data);
 		h.addTest('{;half}', ';half=50%25', data);
 		h.addTest('{;empty}', ';empty', data);
@@ -137,7 +137,7 @@ xdescribe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{;keys*}', ';semi=%3B;dot=.;comma=%2C', data);
 	});
 
-	describe('3.2.8. Form-Style Query Expansion: {?var}', function(){
+	xdescribe('3.2.8. Form-Style Query Expansion: {?var}', function(){
 		h.addTest('{?who}', '?who=fred', data);
 		h.addTest('{?half}', '?half=50%25', data);
 		h.addTest('{?x,y}', '?x=1024&y=768', data);
@@ -150,7 +150,7 @@ xdescribe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{?keys*}', '?semi=%3B&dot=.&comma=%2C', data);
 	});
 
-	describe('3.2.9. Form-Style Query Continuation: {&var}', function(){
+	xdescribe('3.2.9. Form-Style Query Continuation: {&var}', function(){
 		h.addTest('{&who}', '&who=fred', data);
 		h.addTest('{&half}', '&half=50%25', data);
 		h.addTest('?fixed=yes{&x}', '?fixed=yes&x=1024', data);
@@ -162,6 +162,7 @@ xdescribe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{&keys}', '&keys=semi,%3B,dot,.,comma,%2C', data);
 		h.addTest('{&keys*}', '&semi=%3B&dot=.&comma=%2C', data);
 	});
+
 });
 
 
