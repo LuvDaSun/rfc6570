@@ -1,17 +1,18 @@
 var assert = require('assert');
 var UriTemplate = require('../lib/UriTemplate');
 
-module.exports.addTest = function (template, str, data) {
+module.exports.addTest = function (template, str, data, testParse) {
 	var uriTemplate = new UriTemplate(template);
 
 	it("stringify '" + template + "' to '" + str + "'", function(){
 		assert.equal(uriTemplate.stringify(data), str);
-
 	});
 
-	// xit("parse '" + str + "' from '" + template + "'", function(){
-	// 	deepContain(uriTemplate.parse(str), data);
-	// });
+	testParse && it("parse '" + str + "' from '" + template + "'", function(){
+	 	var actual = uriTemplate.parse(str); 
+	 	deepContain(actual, data);
+		assert.equal(uriTemplate.stringify(actual), str);
+	});
 
 }//addTest
 

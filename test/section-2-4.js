@@ -8,10 +8,10 @@ describe('Examples from 2.4. Value Modifiers', function(){
 			, "semi": ";"
        	};
 
-		h.addTest('{var}', 'value', data);
+		h.addTest('{var}', 'value', data, true);
 		h.addTest('{var:20}', 'value', data);
 		h.addTest('{var:3}', 'val', data);
-		h.addTest('{semi}', '%3B', data);
+		h.addTest('{semi}', '%3B', data, true);
 		h.addTest('{semi:2}', '%3B', data);
 
 	});
