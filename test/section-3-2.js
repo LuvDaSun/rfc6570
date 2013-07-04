@@ -33,7 +33,7 @@ describe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{&count*}', '&count=one&count=two&count=three', data);
 	});
 
-	xdescribe('3.2.2. Simple String Expansion: {var}', function(){
+	describe('3.2.2. Simple String Expansion: {var}', function(){
 		h.addTest('{var}', 'value', data);
 		h.addTest('{hello}', 'Hello%20World%21', data);
 		h.addTest('{half}', '50%25', data);
