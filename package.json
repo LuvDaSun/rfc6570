@@ -1,5 +1,5 @@
 {
-  "name": "uri-template",
+  "name": "rfc6570",
   "version": "0.0.2",
   "description": "RFC 6570 compliant uri template parser, builder and router",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:elmerbulthuis/uri-template.git"
+    "url": "git@github.com:elmerbulthuis/rfc6570.git"
   },
   "keywords": [
     "router",
