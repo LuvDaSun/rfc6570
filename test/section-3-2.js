@@ -72,7 +72,7 @@ describe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{+keys*}', 'semi=;,dot=.,comma=,', data);
 	});
 
-	xdescribe('3.2.4. Fragment Expansion: {#var}', function(){
+	describe('3.2.4. Fragment Expansion: {#var}', function(){
 		h.addTest('{#var}', '#value', data);
 		h.addTest('{#hello}', '#Hello%20World!', data);
 		h.addTest('{#half}', '#50%25', data);
