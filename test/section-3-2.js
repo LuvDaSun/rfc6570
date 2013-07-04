@@ -121,14 +121,14 @@ describe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('{/keys*}', '/semi=%3B/dot=./comma=%2C', data);
 	});
 
-	xdescribe('3.2.7. Path-Style Parameter Expansion: {;var}', function(){
+	describe('3.2.7. Path-Style Parameter Expansion: {;var}', function(){
 		h.addTest('{;who}', ';who=fred', data);
 		h.addTest('{;half}', ';half=50%25', data);
-		h.addTest('{;empty}', ';empty', data);
-		h.addTest('{;v,empty,who}', ';v=6;empty;who=fred', data);
+		h.addTest('{;empty}', ';empty', data, true);
+		h.addTest('{;v,empty,who}', ';v=6;empty;who=fred', data, true);
 		h.addTest('{;v,bar,who}', ';v=6;who=fred', data);
 		h.addTest('{;x,y}', ';x=1024;y=768', data);
-		h.addTest('{;x,y,empty}', ';x=1024;y=768;empty', data);
+		h.addTest('{;x,y,empty}', ';x=1024;y=768;empty', data, true);
 		h.addTest('{;x,y,undef}', ';x=1024;y=768', data);
 		h.addTest('{;hello:5}', ';hello=Hello', data);
 		h.addTest('{;list}', ';list=red,green,blue', data);
