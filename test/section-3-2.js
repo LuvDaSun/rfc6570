@@ -104,7 +104,7 @@ describe('Examples from 3.2. Expression Expansion', function(){
 		h.addTest('X{.empty_keys*}', 'X', data);
 	});
 
-	xdescribe('3.2.6. Path Segment Expansion: {/var}', function(){
+	describe('3.2.6. Path Segment Expansion: {/var}', function(){
 		h.addTest('{/who}', '/fred', data);
 		h.addTest('{/who,who}', '/fred/fred', data);
 		h.addTest('{/half,who}', '/50%25/fred', data);
