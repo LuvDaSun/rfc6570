@@ -1,6 +1,6 @@
 {
   "name": "uri-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "RFC 6570 compliant uri template parser, builder and router",
   "main": "index.js",
   "scripts": {
