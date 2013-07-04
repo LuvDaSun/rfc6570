@@ -1,6 +1,6 @@
 var h = require('./h');
 
-xdescribe('Examples from 2.4. Value Modifiers', function(){
+describe('Examples from 2.4. Value Modifiers', function(){
 	
 	describe('2.4.1. Prefix Values', function(){
 		var data = {
