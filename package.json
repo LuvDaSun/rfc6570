@@ -1,6 +1,6 @@
 {
   "name": "rfc6570",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "RFC 6570 compliant uri template parser, builder and router",
   "main": "index.js",
   "scripts": {
@@ -22,6 +22,7 @@
   "devDependencies": {
     "mocha": "~1",
     "bower": "~0.9",
-    "chai": "~1.6"
+    "chai": "~1.6",
+    "browserify": "~2"
   }
 }

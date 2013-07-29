@@ -1,4 +1,4 @@
 module.exports = {
-	Router: require('./lib/Router');
+	Router: require('./lib/Router')
 	, UriTemplate: require('./lib/UriTemplate')
 };

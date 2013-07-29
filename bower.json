@@ -1,10 +1,10 @@
 {
   "name": "rfc6570",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "main": "index.js",
   "ignore": [
     "**/.*",
     "node_modules",
-    "components"
+    "bower_components"
   ]
 }
