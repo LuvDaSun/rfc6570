@@ -1,7 +1,7 @@
 {
   "name": "rfc6570",
   "version": "0.0.4",
-  "main": "index.js",
+  "main": "rfc6570.js",
   "ignore": [
     "**/.*",
     "node_modules",
