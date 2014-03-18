@@ -23,5 +23,6 @@
     "bower": "~0.9",
     "chai": "~1.6",
     "browserify": "~2"
-  }
+  },
+  "version": "0.1.0"
 }
