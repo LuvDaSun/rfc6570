@@ -1,6 +1,5 @@
 {
   "name": "rfc6570",
-  "version": "0.0.5",
   "main": "rfc6570.js",
   "ignore": [
     "**/.*",
