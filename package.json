@@ -1,6 +1,6 @@
 {
   "name": "rfc6570",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "RFC 6570 compliant uri template parser, builder and router",
   "main": "index.js",
   "scripts": {
