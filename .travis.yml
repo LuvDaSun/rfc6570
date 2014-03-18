@@ -5,6 +5,7 @@ node_js:
 
 deploy:
   provider: npm
+  email: elmerbulthuis@gmail.com
   api_key: 
     secure: V1Kv2j2k9wFlxnDZlLAIVzbh2LwaQc/eJChzSDhuxSORfivHybrP0+SjrwkuB1oF2ArCYy4mBK8XVTSvlM1foJ/r98pK7/04aDCC0Bja0IhxZXKEmnn67ArQMVp+3lZw+URcm03Tv5TX8zCj6bzeGAhxBec5VwlCdYN7mtS4WSc=
   on:
