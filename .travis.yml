@@ -5,10 +5,10 @@ node_js:
 
 
 before_deploy:
-- npm version $TRAVIS_BRANCH || exit 0
+- npm version $TRAVIS_BRANCH
 
 deploy:
-  provider: npm
+- provider: npm
   edge: true
   email: elmerbulthuis@gmail.com
   api_key: 
