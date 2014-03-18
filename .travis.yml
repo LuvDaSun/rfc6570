@@ -5,7 +5,7 @@ node_js:
 
 
 before_deploy:
-- npm version $TRAVIS_BRANCH
+- npm version $TRAVIS_BRANCH || exit 0
 
 deploy:
   provider: npm
