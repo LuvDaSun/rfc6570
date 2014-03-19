@@ -3,10 +3,6 @@ language: node_js
 node_js:
 - "0.8"
 
-
-before_deploy:
-- npm version $TRAVIS_BRANCH
-
 deploy:
 - provider: npm
   edge: true
