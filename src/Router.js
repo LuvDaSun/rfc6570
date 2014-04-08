@@ -1,26 +1,28 @@
+/* jshint node:true */
+
 var UriTemplate = require('./UriTemplate');
 
-function Router(){
-	var routes = [];
+function Router() {
+    var routes = [];
 
-	this.add = function(template, handler) {
+    this.add = function (template, handler) {
 
-		routes.push({
-			template: new UriTemplate(template)
-			, handler: handler
-		})//
+        routes.push({
+            template: new UriTemplate(template),
+            handler: handler
+        }); //
 
-	}//add
+    }; //add
 
-	this.handle = function(url) {
-	
-		return routes.some(function(route){
-			var data = route.template.parse(url);
-			return data && route.handler(data) !== false;
-		});
+    this.handle = function (url) {
 
-	}//exec
+        return routes.some(function (route) {
+            var data = route.template.parse(url);
+            return data && route.handler(data) !== false;
+        });
 
-}//Router
+    }; //exec
+
+} //Router
 
 module.exports = Router;
