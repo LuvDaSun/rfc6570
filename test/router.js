@@ -1,6 +1,6 @@
 var assert = require('assert');
 var h = require('./h');
-var Router = require('../lib/Router');
+var Router = require('../src/Router');
 
 describe('Router', function(){
 	var router = new Router();

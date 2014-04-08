@@ -1,5 +1,5 @@
 var assert = require('assert');
-var UriTemplate = require('../lib/UriTemplate');
+var UriTemplate = require('../src/UriTemplate');
 
 module.exports.addTest = function (template, str, data, testParse) {
 	var uriTemplate = new UriTemplate(template);
