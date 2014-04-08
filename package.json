@@ -20,7 +20,6 @@
   "license": "WTFPL",
   "devDependencies": {
     "mocha": "~1",
-    "bower": "~0.9",
     "chai": "~1.6",
     "browserify": "~2"
   },
