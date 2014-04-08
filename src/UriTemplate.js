@@ -211,6 +211,7 @@ function UriTemplate(template) {
 
     this.stringify = function (data) {
         var str = '';
+        data = data || {};
 
         str += glues[0];
         if (!pieces.every(function (piece, pieceIndex) {
