@@ -1,12 +1,15 @@
 language: node_js
-
-node_js:
-- "0.8"
-
+node_js: '0.10'
+before_install:
+- export PATH=./node_modules/.bin:$PATH
+install:
+- npm install --quiet
+script:
+- mocha test/*.js
 deploy:
   provider: npm
   email: elmerbulthuis@gmail.com
-  api_key: 
-    secure: V1Kv2j2k9wFlxnDZlLAIVzbh2LwaQc/eJChzSDhuxSORfivHybrP0+SjrwkuB1oF2ArCYy4mBK8XVTSvlM1foJ/r98pK7/04aDCC0Bja0IhxZXKEmnn67ArQMVp+3lZw+URcm03Tv5TX8zCj6bzeGAhxBec5VwlCdYN7mtS4WSc=
+  api_key:
+    secure: iGUe1GNGCFjCS6RJo6g73fXrDYcE0MBkNPreRgJ+lfbs+H/cjy53DIu43ey3LvDAClOCc0/M21OiHOEh+Ex6XFdFfrXgaFdqBjWIvw1Rk5GRnHOkHAsw9bE9WUKgy1oLP70KY2cKVpB3w1P4GER4aAk+QYuq4Ou779t+9vInXkU=
   on:
-    branch: master
+    tags: true
