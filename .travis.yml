@@ -3,8 +3,10 @@ node_js: '0.10'
 before_install:
 - export PATH=./node_modules/.bin:$PATH
 install:
+- npm install jshint --global --quiet
 - npm install --quiet
 script:
+- jshint . -e .json
 - mocha test/*.js
 deploy:
   provider: npm
