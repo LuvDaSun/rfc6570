@@ -1,7 +1,7 @@
 {
   "name": "rfc6570",
   "description": "RFC 6570 compliant uri template parser, builder and router",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "mocha test/*"
   },
