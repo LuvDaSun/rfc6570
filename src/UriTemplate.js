@@ -36,6 +36,7 @@ var operatorOptions = {
         "prefix": "/",
         "seperator": "/",
         "assignment": false,
+        "assignEmpty": false,
         "encode": encodeURIComponent
     },
     ";": {
