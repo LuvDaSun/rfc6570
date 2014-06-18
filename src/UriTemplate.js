@@ -120,7 +120,7 @@ function UriTemplate(template) {
     var offset = 0;
     var pieceCount = 0;
 
-    while ( !! (match = reTemplate.exec(template))) {
+    while (!!(match = reTemplate.exec(template))) {
         glues.push(template.substring(offset, match.index));
         /*
 		The operator characters equals ("="), comma (","), exclamation ("!"),
@@ -144,7 +144,7 @@ function UriTemplate(template) {
         return {
             name: match[1],
             maxLength: match[2] && parseInt(match[2].substring(1), 10),
-            composite: !! match[3]
+            composite: !!match[3]
         };
     }
 
