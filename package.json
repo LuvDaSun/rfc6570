@@ -19,9 +19,20 @@
   "author": "elmerbulthuis <elmerbulthuis@gmail.com>",
   "license": "WTFPL",
   "devDependencies": {
-    "mocha": "~1",
+    "blanket": "^1.1.6",
+    "browserify": "~2",
     "chai": "~1.6",
-    "browserify": "~2"
+    "coveralls": "^2.10.0",
+    "mocha": "~1",
+    "mocha-lcov-reporter": "0.0.1"
   },
-  "version": "0.1.8"
+  "version": "0.1.8",
+  "dependencies": {
+    "mocha-lcov-reporter": "0.0.1"
+  },
+  "config": {
+    "blanket": {
+      "pattern": "src/"
+    }
+  }
 }

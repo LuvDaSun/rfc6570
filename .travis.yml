@@ -8,6 +8,7 @@ install:
 script:
 - jshint . -e .json
 - mocha test/*.js
+- mocha test/*.js --require blanket --reporter mocha-lcov-reporter | coveralls
 deploy:
   provider: npm
   email: elmerbulthuis@gmail.com
