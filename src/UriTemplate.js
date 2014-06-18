@@ -127,7 +127,7 @@ function UriTemplate(template) {
 		at sign ("@"), and pipe ("|") are reserved for future extensions.
 		*/
         if (match[1] && ~'=,!@|'.indexOf(match[1])) {
-            throw "operator '" + match[1] + "' is reserved for future extensions";
+            throw new Error("operator '" + match[1] + "' is reserved for future extensions");
         }
 
         offset = match.index;
