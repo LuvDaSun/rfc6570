@@ -1,5 +1,8 @@
 language: node_js
 node_js: '0.10'
+env:
+  global:
+  - secure: MHolP2OuOvU/ZgopP6VvRAQsBi6C1fUMzf+1SUvelaQyi7tAgKL7BaHGv6hOIHZ+Pw3mVhHBm0LNtXjA3J47fvLe1OyJ1RXmxn3urjDygNxN3i6zQF0zgDl4H3Cz0b+GmA2pnhnhrSh74LN9OS0wBvg6k3GO6nXkpBvhONS30sQ=
 before_install:
 - export PATH=./node_modules/.bin:$PATH
 install:
@@ -17,7 +20,5 @@ deploy:
     secure: iGUe1GNGCFjCS6RJo6g73fXrDYcE0MBkNPreRgJ+lfbs+H/cjy53DIu43ey3LvDAClOCc0/M21OiHOEh+Ex6XFdFfrXgaFdqBjWIvw1Rk5GRnHOkHAsw9bE9WUKgy1oLP70KY2cKVpB3w1P4GER4aAk+QYuq4Ou779t+9vInXkU=
   on:
     tags: true
-env:
-  global:
-  - secure: RvOak7qo9cU38agsOUCuqbI6khTxJmvuwMR9CWFcWm9Yhzlu8RA1a7ijEq89JvkCD5hDJ/svaQE+wB7KyVaZE86jB6/sQ8DvCgr1S7n2kTrzAo2+FV5zWPXKqj82E1vAR4ScpZcy1cHr5OIfsFmVVYpQBV/K2mqYRcfEECPW5os=
+
 
