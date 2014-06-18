@@ -19,4 +19,5 @@ deploy:
     tags: true
 env:
   global:
-  - secure: "VQO1bFoy2mhojrOTAz22+LE6PvloICtSpiz80FCfeWd75hIfz9vYvm3XwqJyRxQr8nlNJBOQwhwKN79kPDAkfV5qcpk8b8R0CaiwAX6WDrfbKhrf6PvqqW9L4etez3KArkK12Oh+9OuTlW8+aLMf1QzapHzw3/DtDGfEQU51mIA="
+  - secure: RvOak7qo9cU38agsOUCuqbI6khTxJmvuwMR9CWFcWm9Yhzlu8RA1a7ijEq89JvkCD5hDJ/svaQE+wB7KyVaZE86jB6/sQ8DvCgr1S7n2kTrzAo2+FV5zWPXKqj82E1vAR4ScpZcy1cHr5OIfsFmVVYpQBV/K2mqYRcfEECPW5os=
+
