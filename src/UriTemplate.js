@@ -113,8 +113,8 @@ function UriTemplate(template) {
 	op-level3     =  "." / "/" / ";" / "?" / "&"
 	op-reserve    =  "=" / "," / "!" / "@" / "|"
 	*/
-    var reTemplate = /\{([\+#\.\/;\?&=\,!@\|]?)([A-Za-z0-9_\,\.\:\*]+?)\}/g;
-    var reVariable = /^([\$_a-z][\$_a-z0-9]*)((?:\:[1-9][0-9]?[0-9]?[0-9]?)?)(\*?)$/i;
+    var reTemplate = /\{([\+#\.\/;\?&=\,!@\|]?)([A-Za-z0-9_\%\,\.\:\*]+?)\}/g;
+    var reVariable = /^([\$_a-z][\$_a-z0-9\%]*)((?:\:[1-9][0-9]?[0-9]?[0-9]?)?)(\*?)$/i;
     var match;
     var pieces = [];
     var glues = [];
@@ -143,7 +143,7 @@ function UriTemplate(template) {
     function variableMapper(variable) {
         var match = reVariable.exec(variable);
         return {
-            name: match[1],
+            name: decodeURI(match[1]),
             maxLength: match[2] && parseInt(match[2].substring(1), 10),
             composite: !!match[3]
         };
