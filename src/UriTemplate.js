@@ -113,8 +113,8 @@ function UriTemplate(template) {
 	op-level3     =  "." / "/" / ";" / "?" / "&"
 	op-reserve    =  "=" / "," / "!" / "@" / "|"
 	*/
-    var reTemplate = /\{([\+#\.\/;\?&=\,!@\|]?)([A-Za-z0-9_\,\.\:\*]+?)\}/g;
-    var reVariable = /^([\$_a-z][\$_a-z0-9]*)((?:\:[1-9][0-9]?[0-9]?[0-9]?)?)(\*?)$/i;
+    var reTemplate = /\{([\+#\.\/;\?&=\,!@\|]?)([A-Za-z0-9_\,\.\:\*\~]+?)\}/g;
+    var reVariable = /^([\$_a-z][\$_a-z0-9~]*)((?:\:[1-9][0-9]?[0-9]?[0-9]?)?)(\*?)$/i;
     var match;
     var pieces = [];
     var glues = [];
