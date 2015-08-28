@@ -66,6 +66,7 @@ var operatorOptions = {
         "prefix": "/",
         "seperator": "/",
         "assignment": false,
+        "assignEmpty": false,
         "encode": encodeURIComponent
     },
     ";": {
@@ -142,22 +143,22 @@ function UriTemplate(template) {
 	op-level3     =  "." / "/" / ";" / "?" / "&"
 	op-reserve    =  "=" / "," / "!" / "@" / "|"
 	*/
-    var reTemplate = /\{([\+#\.\/;\?&=\,!@\|]?)([A-Za-z0-9_\,\.\:\*]+?)\}/g;
-    var reVariable = /^([\$_a-z][\$_a-z0-9]*)((?:\:[1-9][0-9]?[0-9]?[0-9]?)?)(\*?)$/i;
+    var reTemplate = /\{([\+#\.\/;\?&=\,!@\|]?)([A-Za-z0-9_\,\.\:\*\~]+?)\}/g;
+    var reVariable = /^([\$_a-z][\$_a-z0-9~]*)((?:\:[1-9][0-9]?[0-9]?[0-9]?)?)(\*?)$/i;
     var match;
     var pieces = [];
     var glues = [];
     var offset = 0;
     var pieceCount = 0;
 
-    while ( !! (match = reTemplate.exec(template))) {
+    while (!!(match = reTemplate.exec(template))) {
         glues.push(template.substring(offset, match.index));
         /*
 		The operator characters equals ("="), comma (","), exclamation ("!"),
 		at sign ("@"), and pipe ("|") are reserved for future extensions.
 		*/
         if (match[1] && ~'=,!@|'.indexOf(match[1])) {
-            throw "operator '" + match[1] + "' is reserved for future extensions";
+            throw new Error("operator '" + match[1] + "' is reserved for future extensions");
         }
 
         offset = match.index;
@@ -174,7 +175,7 @@ function UriTemplate(template) {
         return {
             name: match[1],
             maxLength: match[2] && parseInt(match[2].substring(1), 10),
-            composite: !! match[3]
+            composite: !!match[3]
         };
     }
 

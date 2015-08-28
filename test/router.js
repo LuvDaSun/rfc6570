@@ -16,6 +16,7 @@ describe('Router', function () {
     router.add('/a/b/{c}/{d}', setLastRouteData);
     router.add('/a/b/{c}', setLastRouteData);
     router.add('/a/b{?c,d}', setLastRouteData);
+    router.add('/a/b{?c,d~}', setLastRouteData);
 
     it('test 1', function () {
         router.handle('/a/b/1');
