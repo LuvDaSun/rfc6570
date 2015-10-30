@@ -26,6 +26,7 @@ describe('Examples from 2.4. Value Modifiers', function () {
         };
 
         h.addTest('find{?year*}', 'find?year=1965&year=2000&year=2012', data);
+        h.addTest('find{?year%2A}', 'find?year=1965&year=2000&year=2012', data);
         h.addTest('www{.dom*}', 'www.example.com', data);
 
     });

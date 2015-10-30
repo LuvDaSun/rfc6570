@@ -23,6 +23,7 @@ describe('Examples from 3.2. Expression Expansion', function () {
             "comma": ","
         }],
         "v": "6",
+        "foo[bar]": "gernsdorfer",
         "x": "1024",
         "y": "768",
         "empty": "",
@@ -48,7 +49,7 @@ describe('Examples from 3.2. Expression Expansion', function () {
         h.addTest('{half}', '50%25', data, true);
         h.addTest('O{empty}X', 'OX', data, true);
         h.addTest('O{undef}X', 'OX', data);
-        h.addTest('{x,y}', '1024,768', data, true);
+        h.addTest('{x,y}', '1024,768', data, true);        
         h.addTest('{x,hello,y}', '1024,Hello%20World%21,768', data, true);
         h.addTest('?{x,empty}', '?1024,', data, true);
         h.addTest('?{x,undef}', '?1024', data);
@@ -62,6 +63,7 @@ describe('Examples from 3.2. Expression Expansion', function () {
     });
 
     describe('3.2.3. Reserved Expansion: {+var}', function () {
+        
         h.addTest('{+var}', 'value', data, true);
         h.addTest('{+hello}', 'Hello%20World!', data, true);
         h.addTest('{+half}', '50%25', data, true);
@@ -144,6 +146,7 @@ describe('Examples from 3.2. Expression Expansion', function () {
         h.addTest('{;list*}', ';list=red;list=green;list=blue', data);
         h.addTest('{;keys}', ';keys=semi,%3B,dot,.,comma,%2C', data);
         h.addTest('{;keys*}', ';semi=%3B;dot=.;comma=%2C', data);
+        h.addTest('{;foo%5Bbar%5D}', ';foo[bar]=gernsdorfer', data, true);
     });
 
     describe('3.2.8. Form-Style Query Expansion: {?var}', function () {
@@ -157,6 +160,7 @@ describe('Examples from 3.2. Expression Expansion', function () {
         h.addTest('{?list*}', '?list=red&list=green&list=blue', data);
         h.addTest('{?keys}', '?keys=semi,%3B,dot,.,comma,%2C', data);
         h.addTest('{?keys*}', '?semi=%3B&dot=.&comma=%2C', data);
+        h.addTest('{?foo%5Bbar%5D}', '?foo[bar]=gernsdorfer', data, true);
     });
 
     describe('3.2.9. Form-Style Query Continuation: {&var}', function () {
@@ -170,6 +174,8 @@ describe('Examples from 3.2. Expression Expansion', function () {
         h.addTest('{&list*}', '&list=red&list=green&list=blue', data);
         h.addTest('{&keys}', '&keys=semi,%3B,dot,.,comma,%2C', data);
         h.addTest('{&keys*}', '&semi=%3B&dot=.&comma=%2C', data);
+        h.addTest('{&foo%5Bbar%5D}', '&foo[bar]=gernsdorfer', data, true);
     });
+    
 
 });
