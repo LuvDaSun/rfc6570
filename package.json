@@ -27,9 +27,6 @@
     "mocha-lcov-reporter": "0.0.1"
   },
   "version": "0.1.8",
-  "dependencies": {
-    "mocha-lcov-reporter": "0.0.1"
-  },
   "config": {
     "blanket": {
       "pattern": "src/"
